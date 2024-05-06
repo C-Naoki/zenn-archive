@@ -425,7 +425,7 @@ goal:
 $$
 \begin{align*}
 \boldsymbol\mu_{ML} &= \frac{1}{N}\sum_{n=1}^N\mathbf{x}_n \\
-\Sigma_{ML} &= \sum_{n=1}^N(\mathbf{x}_n - \boldsymbol\mu_{ML})(\mathbf{x}_n - \boldsymbol\mu_{ML})^\top
+\Sigma_{ML} &= \frac{1}{N}\sum_{n=1}^N(\mathbf{x}_n - \boldsymbol\mu_{ML})(\mathbf{x}_n - \boldsymbol\mu_{ML})^\top
 \end{align*}
 $$
 
