@@ -16,7 +16,7 @@ seabornは、`sns.load_dataset`関数を用いて、データを読み込むこ�
 ```python
 import seaborn as sns
 
-df = sns.load_dataset('diamonds')
+df = sns.load_dataset('tips')
 ```
 :::details データの詳細
 |     |   total_bill |   tip | sex    | smoker   | day   | time   |   size |
@@ -272,8 +272,12 @@ df = sns.load_dataset('diamonds')
 catplotとは、洗練された可視化を短いコードで実現可能な関数です。
 kindでグラフの種類を指定可能であり、散布図`"strip"`、箱ひげ図`"box"`、バイオリンプロット`"violin"`、棒グラフ`"bar"`、ポイントプロット`"point"`、カウントプロット`"count"`があります。
 ```python
+import seaborn as sns
+
+df = sns.load_dataset('diamonds')
+
 g = sns.catplot(
-    data=df,
+    data=df,        # データセットを指定
     kind='bar',     # グラフの種類を選択
     x='cut',        # X軸に'cut'を設定
     y='carat',      # Y軸に'carat'を設定
@@ -282,7 +286,7 @@ g = sns.catplot(
     col_wrap=4,     # 一行あたりの列数を4に設定
     height=3,       # 各グラフの高さ
     aspect=1.0,     # 各グラフのアスペクト比 (大きいほど横長)
-    errwidth=1.2,
+    errwidth=1.2,   # エラーバーの太さ
 )
 g.tick_params(axis='x', rotation=30)
 ```
