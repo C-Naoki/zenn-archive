@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - main
-      - master
+      - feat/naoki/github-actions
   workflow_dispatch:
 
 permissions:
