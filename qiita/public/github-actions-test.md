@@ -1,14 +1,15 @@
 ---
 title: GitHub Actions用のテスト記事
-private: false
 tags:
   - GitHub
-  - githubactions
-  - Tech
-updated_at: '2024-10-11T17:02:20.000Z'
-id: null
+  - tech
+  - GitHubActions
+private: false
+updated_at: '2024-10-12T02:02:30+09:00'
+id: b4d7461656995c429dbb
 organization_url_name: null
 slide: false
+ignorePublish: false
 ---
 test
 test
