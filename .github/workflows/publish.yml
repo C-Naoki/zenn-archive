@@ -20,7 +20,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Publish Articles to Qiita
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run
         uses: C-Naoki/zenn-qiita-sync@main
         with:
           qiita-token: ${{ secrets.QIITA_TOKEN }}
