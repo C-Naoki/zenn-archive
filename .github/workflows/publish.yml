@@ -20,44 +20,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '21'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Get changed markdown files
-        id: files
-        run: |
-          git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep "^articles/.*\.md$" > changed_files.txt
-        continue-on-error: true
-
-      - name: Run
-        run: |
-          for file in $(cat changed_files.txt); do
-            sh bin/ztoq.sh "$file"
-          done
-        if: steps.files.outcome == 'success'
-
-      - name: Commit files
-        run: |
-          git config --local user.name ${{ github.actor }}
-          git config --local user.email ${{ github.actor }}@users.noreply.github.com
-          git add qiita/public/*.md
-          git commit -m '🔄 auto: convert Zenn articles to Qiita articles'
-          git push
-        if: steps.files.outcome == 'success'
-
-      - name: Publish Qiita articles
-        uses: increments/qiita-cli/actions/publish@v1
+      - name: Publish Articles to Qiita
+        uses: C-Naoki/zenn-qiita-sync@main
         with:
           qiita-token: ${{ secrets.QIITA_TOKEN }}
-          root: "./qiita"
-          commit-message: "🔄 auto: updated by qiita-cli"
+          convert-commit-message: "🔄 auto: convert Zenn articles to Qiita articles"
+          qiitacli-commit-message: "🔄 auto: updated by qiita-cli"
