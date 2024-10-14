@@ -29,14 +29,6 @@ npx zenn new:article --slug 記事のスラッグ --title タイトル --type id
     - `--type`: The type of the article. The options should be chosen from `tech`, `idea`.
     - `--emoji`: The emoji of the article.
 
-### Automatically Publish on Qiita
-[`publish.yml`](https://github.com/C-Naoki/zenn-archive/blob/main/.github/workflows/publish.yml) publishes also articles on Qiita when pushing Zenn articles to the main branch. The procedure to setup is as follows:
-1. Introduce Qiita-CLI.
-    - I refer you to check [official repository](https://github.com/increments/qiita-cli) for more information.
-2. Save the token in the Repo Secrets `GH_TOKEN = <Your Qiita Access Token>`.
-
-
-
 ## References
 We appreciate the following articles for providing useful information:
 
