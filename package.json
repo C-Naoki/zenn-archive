@@ -13,7 +13,7 @@
     "@types/yargs": "^17.0.33",
     "git-url-parse": "^15.0.0",
     "yargs": "^17.7.2",
-    "zenn-cli": "^0.1.158"
+    "zenn-cli": "^0.1.161"
   },
   "devDependencies": {
     "@qiita/qiita-cli": "^1.6.1",
