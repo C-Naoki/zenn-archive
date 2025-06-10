@@ -1,0 +1,12 @@
+title: "勉強記録 〜オンライン予測〜"
+summary: "勉強を記録しています"
+topics: ["機械学習", "オンライン", "リグレット解析", "Tech"]
+published: true
+price: 0
+chapters:
+  - contents
+  - chapter1
+  - chapter2
+  - chapter3
+  - chapter4
+toc_depth: 3
