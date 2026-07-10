@@ -1,14 +1,17 @@
 ---
 title: LaTeXの小ワザ集
-private: false
 tags:
-  - latex
-  - tex
+  - LaTeX
+  - TeX
   - 数式
-updated_at: '2026-07-10T15:49:41.716Z'
-id: null
+private: false
+updated_at: '2026-07-11T00:49:51+09:00'
+id: 670e48e3959ecb203e0d
 organization_url_name: null
 slide: false
+ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 
 ## はじめに
