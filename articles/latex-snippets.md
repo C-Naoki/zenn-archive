@@ -3,7 +3,7 @@ title: "論文執筆で役立つ LaTeX の小ワザ集"
 emoji: "📐"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["latex", "tex", "論文", "数式"]
-published: false
+published: true
 ---
 
 ## はじめに
